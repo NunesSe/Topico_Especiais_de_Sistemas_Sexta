@@ -2,7 +2,6 @@ namespace API.Modelos;
 
 //record Produto(string Nome, string Descricao);
 
-
 public class Produto
 {
 
@@ -24,9 +23,9 @@ public class Produto
     }
 
     // caracteristicas - atributos e propriedades 
-    public string Id {get; set;}
-    public string Nome {get; set; }
-    public string Descricao {get; set;}
+    public string? Id {get; set;}
+    public string? Nome {get; set; }
+    public string? Descricao {get; set;}
     public double Valor{get; set;} 
     public DateTime CriadoEm {get; set;}
 
