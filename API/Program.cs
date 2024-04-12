@@ -34,14 +34,24 @@ app.MapGet("api/produto/buscar/{id}", (string id) =>
 
 
 
-// POST Cadastro de produtos
-app.MapPost("api/produto/cadastrar", () => "Cadastro de produtos!");
 
-app.Run();
+
 
 // EXERCICIO 05/04/24
 // 1) CADASTRAR UM PRODUTO
+//
 // a) pela URL
+app.MapGet("api/produto/cadastrar/{nome}/{descricao}/{valor}", (string nome, string descricao, double valor) => 
+{
+    Produto novoProduto = new Produto(nome, descricao, valor);
+    produtos.Add(novoProduto);
+});
+
 // b) pelo corpo da requisição
+
+app.MapPost("api/produto/cadastrar", () => "Cadastro de produtos!");
+
 // 2) Remover um produto
 // 3) Alterar um produto
+
+app.Run();

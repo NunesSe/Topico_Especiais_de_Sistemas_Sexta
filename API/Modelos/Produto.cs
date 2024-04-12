@@ -9,7 +9,8 @@ public class Produto
     //contrutores
     public Produto()
     {
-
+        Id = Guid.NewGuid().ToString();
+        CriadoEm = DateTime.Now;
     }
 
     public Produto
